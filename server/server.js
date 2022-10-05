@@ -1,5 +1,7 @@
 const express = require('express')
 const dotenv = require('dotenv').config()
+const request = require('request')
+const cheerio = require('cheerio')
 const port = process.env.PORT || 5000
 const connect_DB = require('./config/db')
 const errorHandler = require('./middleware/errorMiddleware')
@@ -21,3 +23,5 @@ app.use(errorHandler)  //Error Handler
 app.listen(port, ()=>{
     console.log(`Server Running on ${port}`)
 })
+
+
